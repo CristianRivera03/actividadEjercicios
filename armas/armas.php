@@ -13,5 +13,30 @@
             <input type="text">
         </form>
     </div>
+
+    <?php
+
+        class Armas{
+            #creacion de atributos
+            public $municion;
+
+            #creacion de constructor 
+            public function __construct($municion){
+                $this -> municion = 0;
+            }
+
+            #creacion de metodos de recargar
+            public function recargar(){
+                if($this -> municion == 0){
+                    $this -> municion == 8;
+                }
+            }
+
+
+
+        }
+
+    ?>
+
 </body>
 </html>
