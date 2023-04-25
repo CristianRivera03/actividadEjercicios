@@ -7,12 +7,30 @@
     <title>Armas</title>
 </head>
 <body>
-    <div class="arma_uno">
-        <img src="asalto.png" alt="">
-        <form action="" method = "POST">
-            <input type="text">
-        </form>
-    </div>
+
+
+<table>
+  <tr>
+    <td>
+      <img src="asalto.png" alt="Asalto" >
+    </td>
+    <td>
+      <img src="escopeta.png" alt="Escopeta">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="scar.jpg" alt="SCAR">
+    </td>
+    <td>
+      <img src="subfusil.png" alt="Subfusil">
+    </td>
+  </tr>
+</table>
+
+
+
+
 
     <?php
 
@@ -30,6 +48,18 @@
                 if($this -> municion == 0){
                     $this -> municion == 8;
                 }
+            }
+
+            #creacion de metodo de disparar
+            public function disparar(){
+                if($this -> municion > 0 && $this -> municion <= 8){
+                    $this -> municion --;
+                }
+            }
+
+            #creacion metodo de balas restantes
+            public function balasRestantes(){
+                return $this -> municion;
             }
 
 
